@@ -1,0 +1,105 @@
+:root {
+    --user-color-gray: rgba(155,155,155,0.3);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: grey;
+}
+
+.flexContainer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.userCardContainer{
+    width: 320px;
+    background-color: white;
+    border-radius: 35px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-shadow: inset 0 0 10px 6px rgba(0,0,0,0.5);
+}
+
+.userCardContainer > header{
+    filter: blur(0.6px);
+    background-image: url("https://www.vangoghgallery.com/img/starry_night_full.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 3px 8px 4px rgba(0,0,0,0.4);
+}
+
+
+.userImageContainer{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 8px solid white;
+    overflow: hidden;
+    margin: -75px auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.userImageContainer > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(60%);
+}
+.userInfoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    box-sizing: border-box;
+    padding: 10px 30px 10px;
+    height: 250px;
+}
+
+.userInfoContainer > h2, h4, h6{
+    color: #777777;
+    font-weight: 200;
+}
+.userInfoContainer > h2{
+    flex-grow: 0.5;
+}
+.userInfoContainer > h4{
+    flex-grow: 1;
+    opacity: 0.6;
+}
+.userInfoContainer > h6{
+    flex-grow: 5;
+    text-align: center;
+}
+
+.userInfoContainer > footer{
+    border-top: 1px var(--user-color-gray) solid;
+    padding-top: 5px;
+}
+
+.userContact{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.userContact > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.userContact+.userContact{
+    margin-left: 10px;
+}
